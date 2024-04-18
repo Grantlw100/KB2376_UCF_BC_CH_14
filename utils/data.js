@@ -1,54 +1,62 @@
-const usersData = [
+
+const userSeed = [
     {
-        username: 'test1',
-        email: '1@mail.com',
+    username: 'testUser1',
+    email: 'testUser@email.com',
+    password: 'password1',
+    thoughts: [],
+    friends: []
     },
     {
-        username: 'test2',
-        email: '2@mail.com',
+    username: 'Usertest2',
+    email: 'testUser2@email.com',
+    password: 'password2',
+    thoughts: [],
+    friends: []
     },
     {
-        username: 'test3',
-        email: '3@mail.com',
+    username: 'tUserest3',
+    email: 'TestUser3@email.com',
+    password: 'password3',
+    thoughts: [],
+    friends: []
+    },
+]
+
+const thoughtSeed = [
+    {
+        thought: 'This is a test thought',
+        reactions: []
     },
     {
-        username: 'test4',
-        email: '4@mail.com',
+        thought: 'This is another test thought',
+        reactions: []
+    },
+    {
+        thought: 'This is a third test thought',
+        reactions: []
+    }
+]
+
+const reactionSeed = [
+    {
+        reactionType: 'Liked', 
+    },
+    {
+        reactionType: 'Loved',
+    },
+    {
+        reactionType: 'Laughed',
+    },
+    {
+        reactionType: 'Disliked',
+    },
+    {
+        reactionType: 'Sad',
+    },
+    {
+        reactionType: 'Angry',
     }
 ];
 
-const thoughtsData = [
-    {
-        thoughtText: 'test1',
-        createdAt: new Date('2021-01-01'),
-        username: 'test1',
-        reactions: []
-    },
-    {
-        thoughtText: 'test2',
-        createdAt: new Date('2021-02-02'),
-        username: 'test2',
-        reactions: []
-    },
-    {
-        thoughtText: 'test3',
-        createdAt: new Date('2021-03-03'),
-        username: 'test3',
-        reactions: []
-    },
-    {
-        thoughtText: 'test4',
-        createdAt: new Date('2021-04-04'),
-        username: 'test4',
-        reactions: []
-    },
-    {
-        thoughtText: 'test5',
-        createdAt: new Date('2021-05-05'),
-        username: 'test5',
-        reactions: []
-    }
-];
-
-
-module.exports = { usersData, thoughtsData };
+module.exports = { userSeed, thoughtSeed, reactionSeed}

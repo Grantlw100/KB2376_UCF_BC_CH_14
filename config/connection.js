@@ -1,6 +1,11 @@
-const { connect, connection } = require('mongoose');
+const { connect, connection } = require("mongoose");
+console.log(process.env.MONGODB_URI);
+const connectionString = process.env.MONGODB_URI;
 
-const connectionString = 'mongodb://localhost:27017/ucfbc14';
+if (!connectionString) {
+  console.error('MongoDB connection string is missing!', connectionString);
+  process.exit(1);  
+}
 
 connect(connectionString);
 
